@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quiz-App</title>
+    <link rel="shortcut icon" href="img/icons8-questionário-16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&family=Montserrat&family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <style>
+        .questoes-container{
+            display: none;
+        }
+
+
+         /* Estilos para o modal */
+    #custom-modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    /* Estilos para o overlay */
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+    </style> 
+</head>
+<body> 
+
+
+
+
+
+<div class="banner-home"></div><!--banner-home-->
+<!-- Modal personalizado -->
+<div id="custom-modal">
+    <p id="modal-message"></p>
+    <button onclick="closeModal()">OK</button>
+  </div>
+
+  <!-- Overlay para fundo escurecido -->
+  <div id="overlay"></div>
+    <div id="background">
+        <div class="container">
+            <div class="tempo">
+                <div class="timer" id="timer"><h2> 
+                    2 : 00 : 00
+                </h2>
+            </div><!--tempo-->
+                <div class="legendtime">
+                    <h2>Tempo </h2>
+                </div>
+            </div><!--tempo-->
+            <div class="questoes ">
+                <div  id="questions-container"></div><!--questions-container-->
+            </div><!--questions-->
+            <div class="wrapper">
+                <button id="backButton" onclick="showPreviousQuestion()">
+                    <img style="height:10px;" src="../img/voltar.png" alt="">
+                    Voltar
+                </button>
+                <button id="nextButton">
+                    Próximo
+                    <img  style="height:10px;" src="../img/proximo.png" alt="">
+                </button>
+                
+                <button  id="finishButton" onclick="finishExam()">
+                    <img style="height:10px;" src="../img/certo.png" alt="">
+                    Finalizar Prova
+                </button>
+                <button>
+                    <a style="text-decoration: none; color: red ; text-transform: uppercase;" href="simulado.html" class="logout-btn">SAIR</a>
+                </button>
+            </div><!--row-->
+        </div><!--container-->
+    </div><!--background-->
+
+    
+
+   
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>
